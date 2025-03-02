@@ -1,0 +1,604 @@
+{
+  "version": 3,
+  "targets": {
+    "net6.0-windows7.0": {
+      "DryIoc.dll/5.4.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/DryIoc.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/DryIoc.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "LiveCharts/0.9.7": {
+        "type": "package",
+        "compile": {
+          "lib/net45/LiveCharts.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net45/LiveCharts.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "LiveCharts.Wpf/0.9.7": {
+        "type": "package",
+        "dependencies": {
+          "LiveCharts": "0.9.7"
+        },
+        "compile": {
+          "lib/net45/LiveCharts.Wpf.dll": {
+            "related": ".pdb;.XML"
+          }
+        },
+        "runtime": {
+          "lib/net45/LiveCharts.Wpf.dll": {
+            "related": ".pdb;.XML"
+          }
+        }
+      },
+      "Microsoft.Extensions.DependencyInjection.Abstractions/8.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0/_._": {}
+        }
+      },
+      "Microsoft.Xaml.Behaviors.Wpf/1.1.135": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0-windows7.0/Microsoft.Xaml.Behaviors.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-windows7.0/Microsoft.Xaml.Behaviors.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WPF"
+        ]
+      },
+      "Prism.Container.Abstractions/9.0.106": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.1"
+        },
+        "compile": {
+          "lib/net6.0/Prism.Container.Abstractions.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Prism.Container.Abstractions.dll": {
+            "related": ".pdb"
+          }
+        },
+        "build": {
+          "buildTransitive/Prism.Container.Abstractions.targets": {}
+        }
+      },
+      "Prism.Container.DryIoc/9.0.106": {
+        "type": "package",
+        "dependencies": {
+          "DryIoc.dll": "5.4.3",
+          "Prism.Container.Abstractions": "9.0.106"
+        },
+        "compile": {
+          "lib/net6.0/Prism.Container.DryIoc.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Prism.Container.DryIoc.dll": {
+            "related": ".pdb"
+          }
+        },
+        "build": {
+          "buildTransitive/Prism.Container.DryIoc.targets": {}
+        }
+      },
+      "Prism.Core/9.0.537": {
+        "type": "package",
+        "dependencies": {
+          "Prism.Container.Abstractions": "9.0.106",
+          "Prism.Events": "9.0.537"
+        },
+        "compile": {
+          "lib/net6.0/Prism.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Prism.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/Prism.Core.targets": {}
+        }
+      },
+      "Prism.DryIoc/9.0.537": {
+        "type": "package",
+        "dependencies": {
+          "Prism.Container.DryIoc": "9.0.106",
+          "Prism.Wpf": "9.0.537"
+        },
+        "compile": {
+          "lib/net6.0-windows7.0/Prism.DryIoc.Wpf.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-windows7.0/Prism.DryIoc.Wpf.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WPF"
+        ],
+        "build": {
+          "buildTransitive/Prism.DryIoc.targets": {}
+        }
+      },
+      "Prism.Events/9.0.537": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Prism.Events.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Prism.Events.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/Prism.Events.targets": {}
+        }
+      },
+      "Prism.Wpf/9.0.537": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Xaml.Behaviors.Wpf": "1.1.122",
+          "Prism.Core": "9.0.537"
+        },
+        "compile": {
+          "lib/net6.0-windows7.0/Prism.Wpf.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-windows7.0/Prism.Wpf.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WPF"
+        ]
+      }
+    }
+  },
+  "libraries": {
+    "DryIoc.dll/5.4.3": {
+      "sha512": "yhXOG3SOxeWYxBAWskNRDD8fzw5hriEawv4VN4WKaFHOuubiop4kxe2rkWTEyCnTgRVgxVUSQCDBBkZqwPm1iQ==",
+      "type": "package",
+      "path": "dryioc.dll/5.4.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "DryIoc.snk",
+        "LICENSE.txt",
+        "dryioc.dll.5.4.3.nupkg.sha512",
+        "dryioc.dll.nuspec",
+        "icon.png",
+        "lib/net45/DryIoc.dll",
+        "lib/net45/DryIoc.xml",
+        "lib/net6.0/DryIoc.dll",
+        "lib/net6.0/DryIoc.xml",
+        "lib/net7.0/DryIoc.dll",
+        "lib/net7.0/DryIoc.xml",
+        "lib/netstandard2.0/DryIoc.dll",
+        "lib/netstandard2.0/DryIoc.xml",
+        "lib/netstandard2.1/DryIoc.dll",
+        "lib/netstandard2.1/DryIoc.xml"
+      ]
+    },
+    "LiveCharts/0.9.7": {
+      "sha512": "p4xyBrUaNNfkWZSNsIle0r51cyVyFg0Yi0uBRZM5GQtdFiA/7guZHlffFyNUILIdux10Ch2hUaJpcZENVU9aaQ==",
+      "type": "package",
+      "path": "livecharts/0.9.7",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net40/LiveCharts.dll",
+        "lib/net40/LiveCharts.pdb",
+        "lib/net40/LiveCharts.xml",
+        "lib/net45/LiveCharts.dll",
+        "lib/net45/LiveCharts.pdb",
+        "lib/net45/LiveCharts.xml",
+        "lib/portable-net45+win8+wp8/LiveCharts.XML",
+        "lib/portable-net45+win8+wp8/LiveCharts.dll",
+        "lib/portable-net45+win8+wp8/LiveCharts.pdb",
+        "livecharts.0.9.7.nupkg.sha512",
+        "livecharts.nuspec",
+        "readme.txt"
+      ]
+    },
+    "LiveCharts.Wpf/0.9.7": {
+      "sha512": "lv6YZoK0B4yWykMq5b9grZXtIbTj+OWu4sVN9GDpdgV6zffu64m4d5CW8KSjfSl9rB8VU649x1NZvhoU67hCDg==",
+      "type": "package",
+      "path": "livecharts.wpf/0.9.7",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net40/LiveCharts.Wpf.XML",
+        "lib/net40/LiveCharts.Wpf.dll",
+        "lib/net40/LiveCharts.Wpf.pdb",
+        "lib/net45/LiveCharts.Wpf.XML",
+        "lib/net45/LiveCharts.Wpf.dll",
+        "lib/net45/LiveCharts.Wpf.pdb",
+        "livecharts.wpf.0.9.7.nupkg.sha512",
+        "livecharts.wpf.nuspec",
+        "tools/install.ps1"
+      ]
+    },
+    "Microsoft.Extensions.DependencyInjection.Abstractions/8.0.1": {
+      "sha512": "fGLiCRLMYd00JYpClraLjJTNKLmMJPnqxMaiRzEBIIvevlzxz33mXy39Lkd48hu1G+N21S7QpaO5ZzKsI6FRuA==",
+      "type": "package",
+      "path": "microsoft.extensions.dependencyinjection.abstractions/8.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "PACKAGE.md",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/net461/Microsoft.Extensions.DependencyInjection.Abstractions.targets",
+        "buildTransitive/net462/_._",
+        "buildTransitive/net6.0/_._",
+        "buildTransitive/netcoreapp2.0/Microsoft.Extensions.DependencyInjection.Abstractions.targets",
+        "lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+        "lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
+        "lib/net6.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+        "lib/net6.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
+        "lib/net7.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+        "lib/net7.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
+        "lib/net8.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+        "lib/net8.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
+        "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
+        "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+        "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
+        "microsoft.extensions.dependencyinjection.abstractions.8.0.1.nupkg.sha512",
+        "microsoft.extensions.dependencyinjection.abstractions.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
+    "Microsoft.Xaml.Behaviors.Wpf/1.1.135": {
+      "sha512": "r8qBEXmQfORso2+MVHnt8PSH4761zJ0SIxgQTSEDVLU97EN2FZdG6/ZCYUPhQy+OrPKgnpYBCAs3PS6Bs7wRsg==",
+      "type": "package",
+      "path": "microsoft.xaml.behaviors.wpf/1.1.135",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net462/Design/Microsoft.Xaml.Behaviors.Design.dll",
+        "lib/net462/Design/Microsoft.Xaml.Behaviors.DesignTools.dll",
+        "lib/net462/Microsoft.Xaml.Behaviors.dll",
+        "lib/net462/Microsoft.Xaml.Behaviors.pdb",
+        "lib/net462/Microsoft.Xaml.Behaviors.xml",
+        "lib/net6.0-windows7.0/Design/Microsoft.Xaml.Behaviors.DesignTools.dll",
+        "lib/net6.0-windows7.0/Microsoft.Xaml.Behaviors.dll",
+        "lib/net6.0-windows7.0/Microsoft.Xaml.Behaviors.pdb",
+        "lib/net6.0-windows7.0/Microsoft.Xaml.Behaviors.xml",
+        "microsoft.xaml.behaviors.wpf.1.1.135.nupkg.sha512",
+        "microsoft.xaml.behaviors.wpf.nuspec",
+        "tools/Install.ps1"
+      ]
+    },
+    "Prism.Container.Abstractions/9.0.106": {
+      "sha512": "QNOERNOqsxvAa8pbWjqFB872DkvYK/cVRrcFO5vJYgWTIKBd8xfaI/jaZ0qeXLYVDz0nrvgJTZVVnip6+68dCw==",
+      "type": "package",
+      "path": "prism.container.abstractions/9.0.106",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "ReadMe.md",
+        "buildTransitive/Prism.Container.Abstractions.targets",
+        "lib/net462/Prism.Container.Abstractions.dll",
+        "lib/net462/Prism.Container.Abstractions.pdb",
+        "lib/net47/Prism.Container.Abstractions.dll",
+        "lib/net47/Prism.Container.Abstractions.pdb",
+        "lib/net6.0/Prism.Container.Abstractions.dll",
+        "lib/net6.0/Prism.Container.Abstractions.pdb",
+        "lib/net7.0/Prism.Container.Abstractions.dll",
+        "lib/net7.0/Prism.Container.Abstractions.pdb",
+        "lib/net8.0/Prism.Container.Abstractions.dll",
+        "lib/net8.0/Prism.Container.Abstractions.pdb",
+        "lib/netstandard2.0/Prism.Container.Abstractions.dll",
+        "lib/netstandard2.0/Prism.Container.Abstractions.pdb",
+        "lib/netstandard2.1/Prism.Container.Abstractions.dll",
+        "lib/netstandard2.1/Prism.Container.Abstractions.pdb",
+        "prism-logo.png",
+        "prism.container.abstractions.9.0.106.nupkg.sha512",
+        "prism.container.abstractions.nuspec"
+      ]
+    },
+    "Prism.Container.DryIoc/9.0.106": {
+      "sha512": "g7UzyK4oRPmEGgz2CV976KTBFk+QPdfktyrL91kvI4YbHciQATO6/r1KFnyRnBE73il5v+SeXXKWIrvlMnsMdg==",
+      "type": "package",
+      "path": "prism.container.dryioc/9.0.106",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "ReadMe.md",
+        "buildTransitive/Prism.Container.DryIoc.targets",
+        "lib/net462/Prism.Container.DryIoc.dll",
+        "lib/net462/Prism.Container.DryIoc.pdb",
+        "lib/net47/Prism.Container.DryIoc.dll",
+        "lib/net47/Prism.Container.DryIoc.pdb",
+        "lib/net6.0/Prism.Container.DryIoc.dll",
+        "lib/net6.0/Prism.Container.DryIoc.pdb",
+        "lib/net7.0/Prism.Container.DryIoc.dll",
+        "lib/net7.0/Prism.Container.DryIoc.pdb",
+        "lib/net8.0/Prism.Container.DryIoc.dll",
+        "lib/net8.0/Prism.Container.DryIoc.pdb",
+        "lib/netstandard2.0/Prism.Container.DryIoc.dll",
+        "lib/netstandard2.0/Prism.Container.DryIoc.pdb",
+        "lib/netstandard2.1/Prism.Container.DryIoc.dll",
+        "lib/netstandard2.1/Prism.Container.DryIoc.pdb",
+        "prism-logo.png",
+        "prism.container.dryioc.9.0.106.nupkg.sha512",
+        "prism.container.dryioc.nuspec"
+      ]
+    },
+    "Prism.Core/9.0.537": {
+      "sha512": "D7mEqPKLVNrD0g2WHCpC/MOKwn8h7X1liCWyjqjL7NCuxgwuhVLTG85E/ZPBkISrXdwvOQZ+bSY31bvP79FQlg==",
+      "type": "package",
+      "path": "prism.core/9.0.537",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "ReadMe.md",
+        "buildTransitive/Prism.Core.targets",
+        "lib/net462/Prism.dll",
+        "lib/net462/Prism.pdb",
+        "lib/net462/Prism.xml",
+        "lib/net47/Prism.dll",
+        "lib/net47/Prism.pdb",
+        "lib/net47/Prism.xml",
+        "lib/net6.0/Prism.dll",
+        "lib/net6.0/Prism.pdb",
+        "lib/net6.0/Prism.xml",
+        "lib/netstandard2.0/Prism.dll",
+        "lib/netstandard2.0/Prism.pdb",
+        "lib/netstandard2.0/Prism.xml",
+        "prism-logo.png",
+        "prism.core.9.0.537.nupkg.sha512",
+        "prism.core.nuspec"
+      ]
+    },
+    "Prism.DryIoc/9.0.537": {
+      "sha512": "tnKifVxlKeSbNP2gZi+nMcjsi/w0lm3aLhBh92gWO6uCoa44ACM9gVJeO77ew4aHYZuoHUd6wHyeozfN7QKWuA==",
+      "type": "package",
+      "path": "prism.dryioc/9.0.537",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "ReadMe.md",
+        "buildTransitive/Prism.DryIoc.targets",
+        "lib/net462/Prism.DryIoc.Wpf.dll",
+        "lib/net462/Prism.DryIoc.Wpf.pdb",
+        "lib/net462/Prism.DryIoc.Wpf.xml",
+        "lib/net47/Prism.DryIoc.Wpf.dll",
+        "lib/net47/Prism.DryIoc.Wpf.pdb",
+        "lib/net47/Prism.DryIoc.Wpf.xml",
+        "lib/net6.0-windows7.0/Prism.DryIoc.Wpf.dll",
+        "lib/net6.0-windows7.0/Prism.DryIoc.Wpf.pdb",
+        "lib/net6.0-windows7.0/Prism.DryIoc.Wpf.xml",
+        "prism-logo.png",
+        "prism.dryioc.9.0.537.nupkg.sha512",
+        "prism.dryioc.nuspec"
+      ]
+    },
+    "Prism.Events/9.0.537": {
+      "sha512": "Pzp5MGUuhAyKXZUbHVYNWLGF/eA3sScqDN6VrzbWlKj85R0IS0q+JXe99umynso2xhXAe+1jrQCCkgqmEFCBng==",
+      "type": "package",
+      "path": "prism.events/9.0.537",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "ReadMe.md",
+        "buildTransitive/Prism.Events.targets",
+        "lib/net462/Prism.Events.dll",
+        "lib/net462/Prism.Events.pdb",
+        "lib/net462/Prism.Events.xml",
+        "lib/net47/Prism.Events.dll",
+        "lib/net47/Prism.Events.pdb",
+        "lib/net47/Prism.Events.xml",
+        "lib/net6.0/Prism.Events.dll",
+        "lib/net6.0/Prism.Events.pdb",
+        "lib/net6.0/Prism.Events.xml",
+        "lib/netstandard2.0/Prism.Events.dll",
+        "lib/netstandard2.0/Prism.Events.pdb",
+        "lib/netstandard2.0/Prism.Events.xml",
+        "prism-logo.png",
+        "prism.events.9.0.537.nupkg.sha512",
+        "prism.events.nuspec"
+      ]
+    },
+    "Prism.Wpf/9.0.537": {
+      "sha512": "srsXhi7FRUFawsNoRkY67duMEGjZo3ff0FpqpkjeWkkAuLazlH1UmNVrvwnpaLQCBboexH/z6oGrLvpeocxgdw==",
+      "type": "package",
+      "path": "prism.wpf/9.0.537",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "ReadMe.md",
+        "lib/net462/Prism.Wpf.dll",
+        "lib/net462/Prism.Wpf.pdb",
+        "lib/net462/Prism.Wpf.xml",
+        "lib/net47/Prism.Wpf.dll",
+        "lib/net47/Prism.Wpf.pdb",
+        "lib/net47/Prism.Wpf.xml",
+        "lib/net6.0-windows7.0/Prism.Wpf.dll",
+        "lib/net6.0-windows7.0/Prism.Wpf.pdb",
+        "lib/net6.0-windows7.0/Prism.Wpf.xml",
+        "prism-logo.png",
+        "prism.wpf.9.0.537.nupkg.sha512",
+        "prism.wpf.nuspec"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net6.0-windows7.0": [
+      "LiveCharts.Wpf >= 0.9.7",
+      "Microsoft.Xaml.Behaviors.Wpf >= 1.1.135",
+      "Prism.Core >= 9.0.537",
+      "Prism.DryIoc >= 9.0.537",
+      "Prism.Wpf >= 9.0.537"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\HUYUE\\.nuget\\packages\\": {},
+    "E:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "E:\\gitrepo\\ProductionMonitor\\ProductionMonitor\\ProductionMonitor.csproj",
+      "projectName": "ProductionMonitor",
+      "projectPath": "E:\\gitrepo\\ProductionMonitor\\ProductionMonitor\\ProductionMonitor.csproj",
+      "packagesPath": "C:\\Users\\HUYUE\\.nuget\\packages\\",
+      "outputPath": "E:\\gitrepo\\ProductionMonitor\\ProductionMonitor\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "E:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\HUYUE\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net6.0-windows"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net6.0-windows7.0": {
+          "targetAlias": "net6.0-windows",
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "all"
+      },
+      "SdkAnalysisLevel": "9.0.100"
+    },
+    "frameworks": {
+      "net6.0-windows7.0": {
+        "targetAlias": "net6.0-windows",
+        "dependencies": {
+          "LiveCharts.Wpf": {
+            "target": "Package",
+            "version": "[0.9.7, )"
+          },
+          "Microsoft.Xaml.Behaviors.Wpf": {
+            "target": "Package",
+            "version": "[1.1.135, )"
+          },
+          "Prism.Core": {
+            "target": "Package",
+            "version": "[9.0.537, )"
+          },
+          "Prism.DryIoc": {
+            "target": "Package",
+            "version": "[9.0.537, )"
+          },
+          "Prism.Wpf": {
+            "target": "Package",
+            "version": "[9.0.537, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          },
+          "Microsoft.WindowsDesktop.App.WPF": {
+            "privateAssets": "none"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100\\RuntimeIdentifierGraph.json"
+      }
+    }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "已使用“.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1”而不是项目目标框架“net6.0-windows7.0”还原包“LiveCharts 0.9.7”。此包可能与项目不完全兼容。",
+      "libraryId": "LiveCharts",
+      "targetGraphs": [
+        "net6.0-windows7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "已使用“.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1”而不是项目目标框架“net6.0-windows7.0”还原包“LiveCharts.Wpf 0.9.7”。此包可能与项目不完全兼容。",
+      "libraryId": "LiveCharts.Wpf",
+      "targetGraphs": [
+        "net6.0-windows7.0"
+      ]
+    }
+  ]
+}

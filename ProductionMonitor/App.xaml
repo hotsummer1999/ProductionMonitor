@@ -1,0 +1,22 @@
+﻿<prism:PrismApplication
+    x:Class="ProductionMonitor.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:converter="clr-namespace:ProductionMonitor.Converters"
+    xmlns:local="clr-namespace:ProductionMonitor"
+    xmlns:prism="http://prismlibrary.com/">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Dictionary/IconDic.xaml" />
+                <ResourceDictionary Source="Dictionary/HoverButtonStyle.xaml" />
+                <ResourceDictionary Source="Dictionary/OperateButtonStyle.xaml" />
+                <ResourceDictionary Source="Dictionary/PrimaryButtonStyle.xaml" />
+                <ResourceDictionary Source="Dictionary/PrimaryGroupBoxStyle.xaml" />
+                <ResourceDictionary Source="Dictionary/PrimaryRadioButtonStyle.xaml" />
+                <ResourceDictionary Source="Dictionary/FadeInStoryBoard.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+            <converter:MachineStatusToColorConverter x:Key="MachineStatusToColorConverter" />
+        </ResourceDictionary>
+    </Application.Resources>
+</prism:PrismApplication>
